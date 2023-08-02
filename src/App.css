@@ -3,14 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 main {
     display: grid;
-    place-items: center;
+    justify-content: center;
+    padding-top: 30%;
     height: 100vh;
     font-family: Karla, sans-serif;
 }
 .tenzies {
-    width: 360px;
+    max-width: 600px;
     height: 380px;
     background: #0B2434;
 }
