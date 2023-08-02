@@ -28,6 +28,15 @@ const App = () => {
   const diceELements = dice.map(die => {
     return <Dice key={die.id} {...die} handleClick={() => holdDice(die.id)} />
   })
+
+  useEffect(() => {
+    const expectedVal = dice[0].value
+    const allExpectedResult = dice.every(die => die.isHeld && die.value === expectedVal)
+    if (allExpectedResult) {
+      setTenzies(true);
+      console.log('You won')
+    }
+  }, [dice])
   // Performance optimisations
   // useEffect(() => {
   //   const expectedVal = dice[0].value
@@ -39,14 +48,6 @@ const App = () => {
   //   setTenzies(true);
   //   console.log('You won')
   // }, dice)
-  useEffect(() => {
-    const expectedVal = dice[0].value
-    const allExpectedResult = dice.every(die => die.isHeld && die.value === expectedVal)
-    if (allExpectedResult) {
-      setTenzies(true);
-      console.log('You won')
-    }
-  }, [dice])
   function regenerateDice() {
     if (tenzies) {
       setDice(allnewDice)
