@@ -28,5 +28,42 @@ main {
     height: 320px;
     margin: 30px 20px;
     flex-shrink: 0;
+    align-items: center;
     text-align: center;
+}
+.dices {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+    grid-template-rows: 1fr 1fr;
+}
+.dice {
+    width: 35.84px;
+    height: 35.84px;
+    border-radius: 3.813px;
+    background: #FFF;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    font-size: 20.589px;
+    cursor: pointer;
+}
+.roll-btn {
+    width: 92.16px;
+    height: 35.84px;
+    margin-top: 15px;
+    flex-shrink: 0;
+    background-color: #5035FF;
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    color: #FFF;
+    text-align: center;
+    font-size: 16.384px;
+    font-weight: 700;
+}
+.roll-btn:active {
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
